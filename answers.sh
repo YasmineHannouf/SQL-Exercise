@@ -4,7 +4,7 @@
 
 4- SELECT Points FROM students where name='Alex'
 
-5- INSERT INTO students VALUES (7, 'Taghrid', 27, 'F', 300);
+5- INSERT INTO students VALUES (7, 'Yasmine', 27, 'F', 300);
 
 6- UPDATE students set Points=400 WHERE name='Basma';
 
@@ -32,3 +32,10 @@ INSERT INTO graduated (Name,Age,Gender,Points) SELECT Name,Age,gender,Points FRO
  WHERE companies.Date<2000
 
  SELECT companies.Name From companies INNER JOIN employees ON employees.Company=companies.Name WHERE Role="Graphic Designer";
+
+ # Count & Filter
+ SELECT * FROM students WHERE Points=(SELECT max(Points) FROM students)
+ SELECT avg(Points) FROM students; 
+ SELECT count(ID) FROM students WHERE Points="500";
+ SELECT Name FROM students WHERE Name like '%s%'
+ SELECT * FROM students ORDER BY Points DESC
