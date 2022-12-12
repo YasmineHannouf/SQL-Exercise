@@ -18,3 +18,10 @@ CREATE TABLE graduates (ID Integer Not Null Primary key AUTOINCREMENT,
                         Gender Text, 
                         Points Integer, 
                         Graduation date)
+                        
+INSERT INTO graduated (Name,Age,Gender,Points) SELECT Name,Age,gender,Points FROM students WHERE name="Layal";
+
+ UPDATE graduated SET Graduation="08/09/2018" WHERE Name="Layal";
+ DELETE FROM students WHERE Name="layal";
+
+ 
